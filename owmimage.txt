@@ -1,0 +1,18 @@
+curl -fsSl https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+
+nano Dockerfile
+FROM ubuntu
+MAINTAINER bhanarkarkumkum@gmail.com
+RUN apt-get update -y
+RUN apt-get install nginx -y
+CMD ["echo","image created"]
+
+docker build -t kumkum:0.1 .
+docker tag kumkum:0.1 email/repo
+docker login
+docker push email/repo:0.1
+docker push email/repo
+docker images
+docker rmi --force imaageID
+docker pull email/repo:0.1

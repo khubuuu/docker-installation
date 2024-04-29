@@ -1,0 +1,13 @@
+curl -fsSl https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+
+docker info
+docker swarm --help
+docker swarm init
+docker service  ls
+docker node ls
+docker service  --help
+docker service create alpine ping www.google.com
+docker service ls
+docker service ps service  ID
+docker container ls

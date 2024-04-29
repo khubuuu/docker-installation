@@ -1,0 +1,5 @@
+curl -fsSl https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+
+docker pull jenkins/jenkins:lts
+docker run --name -p 8080:8080 -p 50000:50000 jenkins/jenkins
