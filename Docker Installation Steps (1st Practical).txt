@@ -41,3 +41,12 @@ docker run hello-world
 ---------------------
 docker ps
 docker ps -a (show dead container)
+docker pull registry
+docker run -d -p 5000:5000 –name registry registry:latest
+docker pull centos
+docker tag ImageID localhost:5000/centos
+docker push localhost:5000/centos
+Delete the local image we have for centos using the $ docker rmi command.
+docker pull localhost:5000/centos
+docker ps
+
